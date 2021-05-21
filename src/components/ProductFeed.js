@@ -3,9 +3,16 @@ import Product from "../components/Product";
 function ProductFeed({ products }) {
   return (
     <div>
-      <h2>Products here:</h2>
+      {console.log(products)}
       {products.map(({ id, title, price, description, category, image }) => (
-        <Product key={id} title={title} />
+        <Product
+          key={id}
+          title={title}
+          price={price}
+          description={description}
+          category={category}
+          image={image}
+        />
       ))}
     </div>
   );
