@@ -1,10 +1,11 @@
+import Product from "../components/Product";
+
 function ProductFeed({ products }) {
   return (
     <div>
       <h2>Products here:</h2>
-      {console.log({ products })}
-      {products.map((product) => (
-        <p key={product.id}>{product.title}</p>
+      {products.map(({ id, title, price, description, category, image }) => (
+        <Product key={id} title={title} />
       ))}
     </div>
   );
